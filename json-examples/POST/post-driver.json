@@ -1,0 +1,11 @@
+{
+    "_POST-URL": "localhost:8080/add",
+    "driver": {
+        "firstName": "mohamed",
+        "lastName": "ahmed",
+        "phone": "01205705626",
+        "car": {
+            "id": 4
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "_POST-URL": "localhost:8080/add",
+    "car": {
+        "licensePlate": "esd908",
+        "convertible": true,
+        "rating": 3,
+        "engineType": "elctric",
+        "manufacturer": "Merc"
+    },
+    "driver": {
+        "firstName": "mohamed",
+        "lastName": "ahmed",
+        "phone": "01205705626"
+    }
+}

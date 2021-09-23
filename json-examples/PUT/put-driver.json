@@ -1,0 +1,11 @@
+{
+    "_PUT-URL": "localhost:8080/update/5",
+    "driver": {
+        "firstName": "mohamed",
+        "lastName": "ahmed",
+        "phone": "01205705626",
+        "car": {
+            "id": 4
+        }
+    }
+}

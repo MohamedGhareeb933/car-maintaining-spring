@@ -1,0 +1,10 @@
+{
+    "_POST-URL": "localhost:8080/add",
+    "car": {
+        "licensePlate": "jshd0998",
+        "convertible": false,
+        "rating": 1,
+        "engineType": "gas",
+        "manufacturer": "da"
+    }
+}
