@@ -8,6 +8,9 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
+/**
+ * car entity has database properties and one to one  relation with driver
+ */
 @Entity
 @Table(name = "car")
 public class Car {

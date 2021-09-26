@@ -3,6 +3,9 @@ package com.example.demo.dto;
 import com.example.demo.entity.Car;
 import com.example.demo.entity.Driver;
 
+/**
+ * that class acts as payload - json body that has objects for both car and driver
+ */
 public class JsonBody {
 
     private Car car;

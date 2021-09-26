@@ -27,6 +27,12 @@ public class RestConfig implements RepositoryRestConfigurer {
         exposeId(config);
     }
 
+    /**
+     * get entities and push them into class list
+     * map them into array and expose id for that array
+     *
+     * @param config
+     */
     private void exposeId(RepositoryRestConfiguration config) {
         Set<EntityType<?> > entities = entityManager.getMetamodel().getEntities();
 

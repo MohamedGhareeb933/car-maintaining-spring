@@ -68,7 +68,7 @@ public class EntityServiceImple implements EntityService{
     }
 
     /**
-     *
+     * remove driver from the car
      *
      * @param id
      * @return

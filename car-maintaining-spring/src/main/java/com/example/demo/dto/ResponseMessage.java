@@ -1,5 +1,9 @@
 package com.example.demo.dto;
 
+/***
+ *
+ * response message class that has string message
+ */
 public class ResponseMessage {
 
     private String message;
