@@ -120,6 +120,21 @@ for the driver entity, you have to check that the car don't have any driver befo
 
 **REMEMBER TO AUTHENTICATE WITH ROLE ADMIN BEFORE USING PUT OR REMOVE OR POST METHODS**
 
+# DELETE METHOD 
+
+ **DELETE CAR URL** : `localhost:8080/cars/1`
+
+ delete car api : first it search for the car driver and sent its insatnce to null then delete the car from the DB 
+
+ **DELETE DRIVER URL** : `localhost:8080/drivers/1`
+
+ delete driver api : delete the car driver for the first request becouse driver table has Car fk 
+
+ it set the car driver to null 
+
+ second : delete the driver object 
+
+
 ## THE PROJECT HAS 
 
 * **configuration** for exposing id 

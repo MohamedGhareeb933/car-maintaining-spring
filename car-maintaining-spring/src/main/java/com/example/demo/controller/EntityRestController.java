@@ -32,4 +32,17 @@ public class EntityRestController {
     public ResponseMessage removeCar(@PathVariable long id) {
         return entityService.removeCar(id);
     }
+
+
+    @RequestMapping(value = "/cars/{id}", method = RequestMethod.DELETE)
+    public ResponseMessage deleteCar(@PathVariable long id)
+    {
+        return entityService.deleteCar(id);
+    }
+
+    @RequestMapping(value = "/drivers/{id}", method = RequestMethod.DELETE)
+    public ResponseMessage deleteDriver(@PathVariable long id)
+    {
+        return entityService.deleteDriver(id);
+    }
 }

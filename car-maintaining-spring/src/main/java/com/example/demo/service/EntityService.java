@@ -11,4 +11,8 @@ public interface EntityService {
     
     public ResponseMessage removeCar(long id);
 
+    public ResponseMessage deleteCar(long id);
+
+    public ResponseMessage deleteDriver(long id);
+
 }

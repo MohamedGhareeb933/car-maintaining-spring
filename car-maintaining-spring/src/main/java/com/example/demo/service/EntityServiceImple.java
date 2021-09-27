@@ -88,6 +88,58 @@ public class EntityServiceImple implements EntityService{
     }
 
     /**
+     * delete the car by id
+     * find the car by id then  find all drivers
+     * iterate all the drivers , in case we found car driver we remove it
+     * then delete the car
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public ResponseMessage deleteCar(long id) {
+
+        String message = "Car Deleted";
+
+        carRepository.findById(id).ifPresent(
+                car -> {
+                    driverRepository.findAll().forEach(
+                            driver -> {
+                                if (driver.getCar() == car) {
+                                    driver.setCar(null);
+                                }
+                            });
+                    carRepository.delete(car);
+                });
+
+        return new ResponseMessage(message);
+    }
+
+    /**
+     * delete the driver by id
+     * if the driver has a car , remove the car insatnce
+     * then delete the driver
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public ResponseMessage deleteDriver(long id) {
+
+        AtomicReference<String> message = new AtomicReference<>("Driver Deleted");
+
+        driverRepository.findById(id).ifPresent( driver -> {
+            if (driver.getCar() != null) {
+                removeCar(id);
+                message.set("Driver car Removed, the Driver is ready for Delete, send another request");
+            }
+            driverRepository.delete(driver);
+        });
+
+        return new ResponseMessage(message.get());
+    }
+
+    /**
      *  find driver and get driver object from json
      *  update the driver object we got from find by id if driver json object property exist
      *  then save the updated driver
