@@ -114,7 +114,7 @@ you can define whatever properties you want
 
 like chose to update all the car properties entity or only one 
 
-for the driver entity, you have to check that the car don't have any driver before updating 
+for the driver entity, you have to check that the car won't have any driver before updating 
 
 
 
@@ -138,10 +138,10 @@ for the driver entity, you have to check that the car don't have any driver befo
 ## THE PROJECT HAS 
 
 * **configuration** for exposing id 
-* **spring security** config file to determine the datasource and match url with user role 
+* **spring security** config file to determine the datasource and match URL with user role 
 * **Rest Controller**  Request Methods for HTTP POST/PUT
 * **JPA Data Access Layer** 
 * **Data Transfer Layer** to POST/PUT payload 
-* **Entities** Car/driver for main program - role/user for security 
-* **User Details** for Spring Security to determine the authrization and Authentication and in out case the userDetail Manager takes its information from JPA 
+* **Entities** Car/driver for the main program - role/user for security 
+* **User Details** for Spring Security to determine the authorization and Authentication and in our case, the userDetail Manager takes its information from JPA 
 * **service layer** define the logic behind the POST/PUT requests.  
